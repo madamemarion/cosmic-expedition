@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cosmic Expedition</title>
+    <style>
+        body,
+        h1,
+        p {
+          margin: 0;
+          padding: 0;
+        }
+  
+        q {
+          font-style: italic;
+        }
+  
+        body {
+          font-family: Arial, sans-serif;
+          background: linear-gradient(
+            109.6deg,
+            rgba(0, 0, 0, 0.93) 11.2%,
+            rgb(63, 61, 61) 78.9%
+          );
+          color: white;
+          text-align: center;
+          line-height: 1.6;
+        }
+  
+        header {
+          background-color: #333;
+          padding: 20px;
+        }
+  
+        header h1 {
+          font-size: 36px;
+          margin-bottom: 10px;
+        }
+  
+        main {
+          padding: 20px;
+        }
+  
+        footer {
+          background-color: #333;
+          padding: 10px;
+        }
+  
+        img {
+          max-width: 300px;
+          border-radius: 50%;
+        }
+  
+        a.button,
+        button {
+          background: #111;
+          color: rgb(255, 255, 255);
+          border: none;
+          border-radius: 5px;
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 18px;
+          margin: 10px;
+          font-weight: bold;
+        }
+  
+        a.button:hover,
+        button:hover {
+          background-color: #ffffff;
+          color:#111;
+          transition-delay: 3ms ;
+        }
+  
+      </style>
+    </head>
+    <body>
+      <header>
+          <h1>Cosmic Expedition</h1>
+          <q> The sky is the ultimate art gallery just above us. </q> -
+          Ralph Waldo Emerson
+        </header>
+    
+        <main>
+          <section>
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/096/761/original/sky.jpeg?1694509776"
+            />
+            <h1>🪐 Discover the Sky</h1>
+    
+            <p>
+              Explore the beauty and mysteries of the sky. <br />
+              Learn about constellations, planets, and more.
+            </p>
+            <strong>
+              <a
+                href="https://www.nasa.gov/"
+                target="_blank"
+                class="button"
+              >
+                NASA
+              </a>
+              <a
+                href="https://www.skyandtelescope.com/"
+                target="_blank"
+                class="button"
+              >
+                Sky & Telescope
+              </a>
+            </strong>
+            <br /><br />
+    
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/096/768/original/Seronik-Moon-and-clouds.jpeg?1694511028"
+            />
+            <h1>🌚 Everything about the Moon 🌝</h1>
+            <p>All Moon's secrets and updates.</p>
+            <strong>
+              <a
+                href="https://moon.nasa.gov/"
+                target="_blank"
+                class="button"
+              >
+                NASA: Earth's Moon
+              </a>
+            </strong>
+            <br /><br />
+    
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/096/752/original/etoile-filante-nuit-etoiles-960x640.jpeg?1694504728"
+            />
+    
+            <h1>💫 💭 Make a wish upon a Star</h1>
+            <p>Make a wish upon a star and see if it comes true.</p>
+    
+            <strong>
+              <button id="makeWish" class="button">Make a Wish</button>
+            </strong>
+    
+            <br /><br />
+    
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/096/753/original/stars.jpeg?1694505035"
+            />
+    
+            <h1>⭐️ Name your own Star</h1>
+            <strong>
+              <button id="nameYourStarButton" class="button">Name your Star</button>
+            </strong>
+          </section>
+        </main>
+    
+        <footer>
+          <p>&copy; Marion Frotté | 2023</p>
+        </footer>
+        <script>
+            let makeWishButton = document.getElementById("makeWish");
+      
+            makeWishButton.addEventListener("click", function () {
+              alert("Your wish is on its way! ✨");
+            });
+      
+            let nameYourStarButton = document.getElementById(
+              "nameYourStarButton"
+            );
+      
+            nameYourStarButton.addEventListener("click", function () {
+              let enteredName = prompt("Enter a Star name");
+              if (enteredName) {
+                alert(enteredName + " is now part of the sky! 🌟");
+                starNameResultDiv.textContent =
+                  enteredName + " is now part of the sky!";
+              } else {
+                alert("Please enter a Star name. 🙈");
+              }
+            });
+          </script>
+    </body>
+    </html>
